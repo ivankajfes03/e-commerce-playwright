@@ -1,5 +1,5 @@
 const {test} = require('@playwright/test');
-const testSteps = require('../../testUtils/testSteps');
+const testSteps = require('../../../testUtils/testSteps');
 
 test('Check Adding Product to the Cart', async ({ page }) => {
 
