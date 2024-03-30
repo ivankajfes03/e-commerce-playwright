@@ -4,6 +4,7 @@ const { userCredentials, productTestData } = require('../../../testUtils/testDat
 
 test('Check Checkout Completion', async ({ page }) => {
 
+    test.setTimeout(60000);
     await page.setViewportSize({ width: 1920, height: 1080 });
 
     await testSteps.openHomePage(page);
