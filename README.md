@@ -8,7 +8,7 @@
 
 # Task 2.1 Instructions
 
-## Browser Driven Functional Testing
+### Browser Driven Functional Testing
 
 ### Instructions:
 Follow these steps to get the project up and running on your local machine.
@@ -30,3 +30,10 @@ Make sure you have [Node.js](https://nodejs.org/en/) (which includes npm) instal
 `npx playwright test tests/web/guest/scenario1/test_scenario1.spec.js --project chromium --headed`  
 `npx playwright test tests/web/guest/scenario2/test_scenario2.spec.js --project chromium --headed`  
 `npx playwright test tests/web/guest/scenario2/test_scenario2.spec.js --project chromium --headed`
+
+# Task 2.2 Instructions
+
+### Instructions:
+
+1. Running all Api Tests:  
+`npx playwright test tests/api`
