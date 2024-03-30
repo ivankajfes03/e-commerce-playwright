@@ -6,6 +6,10 @@ const testSteps = {
         await page.goto('https://magento.softwaretestingboard.com/');
     },
 
+    openCheckoutPage: async (page) => {
+        await page.goto('https://magento.softwaretestingboard.com/checkout/#shipping');
+    },
+
     login: async (page, email, password) => {
         await page.getByRole('link', { name: 'Sign In' }).click();
         await page.getByLabel('Email', { exact: true }).click();
@@ -73,7 +77,31 @@ const testSteps = {
     checkCartSubtotal: async (page, expectedSubtotal) => {
         const cartSubtotal = await page.locator('.amount');
         await expect(cartSubtotal).toHaveText(expectedSubtotal);
-    },   
+    },
+
+    performCheckout: async (page, testData) => {
+        await page.getByRole('textbox', { name: 'Email Address *' }).click();
+        await page.getByRole('textbox', { name: 'Email Address *' }).fill(testData.email);
+        await page.getByLabel('First Name').click();
+        await page.getByLabel('First Name').fill(testData.firstName);
+        await page.getByLabel('First Name').press('Tab');
+        await page.getByLabel('Last Name').fill(testData.lastName);
+        await page.getByLabel('Street Address: Line 1').click();
+        await page.getByLabel('Street Address: Line 1').fill(testData.streetAddress);
+        await page.getByLabel('City').click();
+        await page.getByLabel('City').fill(testData.city);
+        await page.getByLabel('Country').selectOption(testData.country);
+        await page.getByLabel('Zip/Postal Code').click();
+        await page.getByLabel('Zip/Postal Code').fill(testData.postalCode);
+        await page.locator('select[name="region_id"]').selectOption(testData.regionId);
+        await page.getByLabel('Phone Number').click();
+        await page.getByLabel('Phone Number').fill(testData.phoneNumber);
+        await page.getByLabel('Fixed').check();
+        await page.getByRole('button', { name: 'Next' }).click();
+        await page.getByRole('button', { name: 'Place Order' }).click();
+        await page.getByText('Thank you for your purchase!');
+        await page.isVisible('text="Your order number is:"');
+    },
 };
 
 module.exports = testSteps
