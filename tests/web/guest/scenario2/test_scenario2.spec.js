@@ -4,7 +4,7 @@ const testSteps = require('../../../testUtils/testSteps');
 test('Check Checkout Completion', async ({ page }) => {
 
     const testData = {
-        email: 'test-ik03@gmail.com',
+        email: 'test-guest03@gmail.com',
         firstName: 'Test Name',
         lastName: 'Test Last Name',
         streetAddress: 'Test Street Address',

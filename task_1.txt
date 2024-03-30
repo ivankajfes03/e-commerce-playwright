@@ -6,17 +6,16 @@ Test Scenarios:
 Scenario 1: Check Adding Product to the Cart //guest
 - Critical Scenario as it tests the fundamental functionality of the e-commerce platform
 - Ensuring guests can effortlessly add products to their cart is vital, as any difficulty 
-  in this process could result in customer dissatisfaction and potential revenue loss
-  
-Scenario 2: Check Adding Product to the Cart //user
-- Critical Scenario as it tests the fundamental functionality of the e-commerce platform
-- Ensuring users can effortlessly add products to their carts is vital, as any difficulty 
-  in this process could result in customer dissatisfaction and potential revenue loss
-- Ensuring a smooth experience for registered users can encourage loyalty and repeat purchases
+  in this process could result in customer dissatisfaction and potential profits loss
+
+Scenario 2: Check Checkout Completion //guest
+- Failure to complete the checkout process successfully may result in customers leaving 
+  and a decrease in profits
 
 Scenario 3: Check Checkout Completion //user
 - Failure to complete the checkout process successfully may result in customers leaving 
   and a decrease in profits
+- Ensuring a smooth experience for registered users can encourage loyalty and repeat purchases
 
 Scenario 4: Check Aply Discount code
 - This scenario holds significance in attracting customers and encouraging more shopping activity

@@ -14,7 +14,7 @@ const testSteps = {
         await page.getByRole('link', { name: 'Sign In' }).click();
         await page.getByLabel('Email', { exact: true }).click();
         await page.getByLabel('Email', { exact: true }).fill(email);
-        await page.getByLabel('Email', { exact: true }).press('Tab');
+        await page.getByLabel('Password').click();
         await page.getByLabel('Password').fill(password);
         await page.getByRole('button', { name: 'Sign In' }).click();
     },
