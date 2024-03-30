@@ -25,6 +25,62 @@ Scenario 5: Check Orders and Returns
 - This scenario is very important as it helps build trust between customers and the shop
 - If customers cannot check their orders, it may result in a negative reputation
 
-Scenario 6: Check View and Edit Cart
-- This scenario is critical for testing basic functionalities. Additionally, 
-  if customers cannot edit their carts, it can result in a poor user experience and dissatisfied customers
+
+1.2. Write detailed test cases/acceptance criteria for the identified scenarios.
+Test Cases/Acceptance Criteria:
+Scenario 1: Check Adding Product to the Cart //guest
+  Prerequistis: The user has not logged in and is browsing as a guest.
+  
+  Steps:
+  1. Open the e-commerce site
+  2. Select 'Woman' from a menu
+  3. Choose 'Jackets' category:
+  4. Select 'Olivia 1/4 Zip Light Jacket' product:
+  5. Choose Size 'M'
+  6. Select Color 'Black':
+  7. Add Product to Cart
+  8. Navigate to Cart:
+  
+  Expected result:
+  Correct number of items in the cart
+  Correct product in the cart
+  Correct Subtotal
+  
+Scenario 2: Check Checkout Completion //guest
+  Prerequistis: The user has logged in and is browsing as a registered user.
+  
+  Steps:
+  1. Open the e-commerce site
+  2. Select 'Woman' from a menu
+  3. Choose 'Jackets' category
+  4. Select 'Olivia 1/4 Zip Light Jacket' product
+  5. Choose Size 'M'
+  6. Select Color 'Black'
+  7. Add Product to Cart
+  8. Open Cart
+  9. Navigate to Checkout Page
+  10.Perform Checkout
+  
+  Expected result:
+  Wait until 'Thank you for your purchase!'
+  Wait until text 'Your order number is:'
+
+Scenario 3: Check Checkout Completion  //user
+  Prerequistis: The user has logged in and is browsing as a registered user.
+  
+  Steps:
+  1. Open the e-commerce site
+  2. Login with already created account
+  2. Select 'Woman' from a menu
+  3. Choose 'Jackets' category
+  4. Select 'Olivia 1/4 Zip Light Jacket' product
+  5. Choose Size 'M'
+  6. Select Color 'Black'
+  7. Add Product to Cart
+  8. Open Cart
+  9. Navigate to Checkout Page
+  10.Perform Checkout
+
+  Expected result:
+  Wait until 'Thank you for your purchase!'
+  Wait until text 'Your order number is:'
