@@ -21,7 +21,7 @@ test('Check Checkout Completion', async ({ page }) => {
     const productSize = 'M';
     const productColor = 'Black';
 
-    await page.setViewportSize({ width: 1600, height: 1200 });
+    await page.setViewportSize({ width: 1920, height: 1080 });
 
     await testSteps.openHomePage(page);
     await testSteps.navigateToClothing(page, gender);
