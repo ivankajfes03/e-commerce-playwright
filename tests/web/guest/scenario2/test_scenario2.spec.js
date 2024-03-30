@@ -13,7 +13,7 @@ test('Check Checkout Completion', async ({ page }) => {
     await testSteps.selectProductSize(page, productTestData.productSize);
     await testSteps.selectProductColor(page, productTestData.productColor);
     await testSteps.addProductToCart(page);
-    await page.getByText('You added Olivia 1/4 Zip').click();
+    await page.getByText('You added Olivia 1/4 Zip').click(); // to improve
     await testSteps.openCart(page);
     await testSteps.openCheckoutPage(page)
     await testSteps.performCheckout(page, guestTestData);

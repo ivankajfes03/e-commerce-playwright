@@ -14,6 +14,8 @@ test('Check Checkout Completion', async ({ page }) => {
     await testSteps.selectProductSize(page, productTestData.productSize);
     await testSteps.selectProductColor(page, productTestData.productColor);
     await testSteps.addProductToCart(page);
+
+    // to improve
     await page.getByText('You added Olivia 1/4 Zip').click();
     await testSteps.openCheckoutPage(page);
     await page.getByRole('button', { name: 'Next' }).click();
@@ -21,4 +23,5 @@ test('Check Checkout Completion', async ({ page }) => {
 
     await page.getByText('Thank you for your purchase!');
     await page.isVisible('text="Your order number is:"');
+    // to improve
 });
