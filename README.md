@@ -21,4 +21,6 @@ Make sure you have [Node.js](https://nodejs.org/en/) (which includes npm) instal
 `npm install`
 
 3. Run tests in UI mode:  
-`npx playwright test --ui`
+`npx playwright test --ui`  
+
+4. Open the `test_results.png` file located in this project's directory to review the local test execution results.
